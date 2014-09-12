@@ -1,18 +1,13 @@
 <?php
+    require __DIR__ .'/../vendor/autoload.php';
 
-    function a($a) {
-        return $a +1;
-    }
-
-    function b() {
-        return false;
-    }
+    use Codecov\Coverage;
 
     class Test extends PHPUnit_Framework_TestCase
     {
         public function testExample()
         {
-            $this->assertTrue(a(6) == 7);
+            $result = Codecov\Coverage::send();
         }
     }
 ?>  
