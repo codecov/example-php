@@ -16,4 +16,4 @@ sniff: vendor
 	vendor/bin/phpcs --standard=PSR2 src -n
 
 test: vendor
-	vendor/bin/phpunit --coverage-clover=clover.xml
+	vendor/bin/phpunit --coverage-clover=coverage.xml
