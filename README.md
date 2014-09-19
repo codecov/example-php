@@ -1,4 +1,4 @@
-php -> Codecov.io [![Build Status](https://secure.travis-ci.org/codecov/codecov-php.svg?branch=master)](http://travis-ci.org/codecov/codecov-php) [![codecov.io](https://codecov.io/github/codecov/codecov-php/coverage.svg?branch=master)](https://codecov.io/github/codecov/codecov-php?branch=master)
+php -> Codecov.io [![Build Status](https://secure.travis-ci.org/codecov/codecov-php.svg?branch=master)](http://travis-ci.org/codecov/codecov-python) [![codecov.io](https://codecov.io/github/codecov/codecov-python/coverage.svg?branch=master)](https://codecov.io/github/codecov/codecov-php?branch=master)
 =======
 | [https://codecov.io/][1] | [@codecov][2] | [hello@codecov.io][3] |
 | ------------------------ | ------------- | --------------------- |
