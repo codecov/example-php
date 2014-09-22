@@ -16,5 +16,6 @@ before_script:
 
 script: 
     - vendor/bin/phpunit --coverage-clover=coverage.xml
+
 after_success: 
     - codecov
