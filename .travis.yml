@@ -8,7 +8,7 @@ php:
     - hhvm
 
 before_install:
-    - sudo pip install git+https://github.com/codecov/codecov-python@master#egg=codecov
+    - sudo pip install git+https://github.com/codecov/codecov-python@wip#egg=codecov
     
 before_script:
     - travis_retry composer self-update
