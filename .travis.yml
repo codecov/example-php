@@ -5,7 +5,10 @@ php:
 
 before_install:
     - sudo pip install git+https://github.com/codecov/codecov-python@master#egg=codecov
-    
+env:
+  global:
+    - HELLO=world
+
 before_script:
     - travis_retry composer self-update
     - travis_retry composer install --no-interaction --prefer-source --dev
@@ -15,4 +18,4 @@ script:
 
 after_success: 
     - cat coverage.xml
-    - codecov --min-coverage=50
+    - codecov --min-coverage=50 --env HELLO
