@@ -4,7 +4,7 @@ php:
     - 5.3
 
 before_install:
-    - sudo pip install git+https://github.com/codecov/codecov-python@wip#egg=codecov
+    - sudo pip install git+https://github.com/codecov/codecov-python@master#egg=codecov
     
 before_script:
     - travis_retry composer self-update
