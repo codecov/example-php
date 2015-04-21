@@ -1,64 +1,41 @@
-PHP Example
-=======
-| [https://codecov.io/][1] | [@codecov][2] | [hello@codecov.io][3] |
-| ------------------------ | ------------- | --------------------- |
+Codecov PHP Example
+===================
 
-> Example of how to integrate with [Codecov.io][1] for your **awesome** PHP project!
+| [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
+| ----------------------- | ------------- | --------------------- |
 
-## See this repos [Coveage Reports][4]
+This repository serves as an **Example** on how to use [Codecov Global][4] for PHP.
 
+# Travis CI
 
-## Usage
-
-```sh
-sudo pip install codecov
-codecov --token=<repo token>
-```
-
-## Require min coverage
-```sh
-codecov --min-coverage=75
-```
-> if coverage is under `75` codecov will trigger your build to fail
-
-# [![travis-org](https://avatars2.githubusercontent.com/u/639823?v=2&s=50)](https://travis-ci.org) Travis C
-> Append to your `.travis.yml`
-
+Add to your `.travis.yml` file.
 ```yml
-install:
-    sudo pip install codecov
+language:
+  java
+
 after_success:
-    codecov
+  - bash <(curl -s https://codecov.io/bash)
 ```
 
-> ### Start testing with [Travis](https://travis-ci.org/)
+> All other CI you can simply run `bash <(curl -s https://codecov.io/bash)`.
 
-# [![codeship](https://avatars1.githubusercontent.com/u/2988541?v=2&s=50)](https://codeship.io/) Codeship
-> Append to your `Test Commands` *after* your test commands
+## Private Repos
 
-```sh
-sudo pip install codecov
-codecov --token=<repo token>
-```
-
-> ### Start testing with [Codeship](https://codeship.io/)
-
-
-# [![circleci](https://avatars0.githubusercontent.com/u/1231870?v=2&s=50)](https://circleci.com/) Circle CI
-> Append to your `circle.yml` file
-
+Add to your `.travis.yml` file.
 ```yml
-test:
-    post:
-        - sudo pip install codecov
-        - codecov --token=<repo token>
+language:
+  java
+env:
+  global:
+    - CODECOV_TOKEN=:uuid-repo-token
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 ```
-> ### Start testing with [Circle CI](https://circleci.com/)
 
-
-
+View source and lean more about [Codecov Global Uploader][4]
 
 [1]: https://codecov.io/
 [2]: https://twitter.com/codecov
 [3]: mailto:hello@codecov.io
-[4]: https://codecov.io/github/codecov/example-php
+[4]: https://github.com/codecov/codecov-bash
