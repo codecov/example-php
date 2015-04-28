@@ -4,7 +4,7 @@ Codecov PHP Example
 | [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
 | ----------------------- | ------------- | --------------------- |
 
-This repository serves as an **Example** on how to use [Codecov Global][4] for PHP.
+This repository serves as an **example** on how to use [Codecov Global][4] for PHP.
 
 # Travis CI
 
