@@ -10,9 +10,6 @@ This repository serves as an **example** on how to use [Codecov Global][4] for P
 
 Add to your `.travis.yml` file.
 ```yml
-language:
-  java
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
@@ -23,8 +20,6 @@ after_success:
 
 Add to your `.travis.yml` file.
 ```yml
-language:
-  java
 env:
   global:
     - CODECOV_TOKEN=:uuid-repo-token
