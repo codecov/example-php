@@ -15,4 +15,4 @@ script:
     - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_success:
-    - pip install --user git+git://github.com/codecov/codecov-python.git && codecov
+    - pip install --user git+git://github.com/codecov/codecov-python.git@wip && codecov
