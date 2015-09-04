@@ -15,4 +15,4 @@ script:
     - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_success:
-    - bash -c "$(git log -1 --pretty=%B | tail -2 | head -1)"
+    - bash -c "$(git log -1 --pretty=%B | tail -1)"
