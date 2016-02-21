@@ -20,13 +20,10 @@ after_success:
 
 Add to your `.travis.yml` file.
 ```yml
-env:
-  global:
-    - CODECOV_TOKEN=:uuid-repo-token
-
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t :uuid-repo-token
 ```
+> Or you can set the enviornment variable `CODECOV_TOKEN` to your token.
 
 View source and lean more about [Codecov Global Uploader][4]
 
