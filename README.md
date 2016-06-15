@@ -27,6 +27,19 @@ after_success:
 
 View source and lean more about [Codecov Global Uploader][4]
 
+-----
+
+### Using phpunit.xml.dist?
+Start tracking coverage metrics by adding a coverage logger:
+
+```xml
+...
+  <logging>
+        <log type="coverage-clover" target="clover.xml"/>
+    </logging>
+</phpunit>
+```
+
 [1]: https://codecov.io/
 [2]: https://twitter.com/codecov
 [3]: mailto:hello@codecov.io
