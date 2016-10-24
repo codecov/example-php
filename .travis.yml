@@ -16,3 +16,5 @@ script:
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
+  https://apps.facebook.com
+   https://my-android-sdk-app.com
