@@ -23,7 +23,7 @@ Start tracking coverage metrics by adding a coverage logger:
 
 ####❔I don't see one or more files?
 
-Codecov will only show files that have lines covered (hit or miss). If you file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
+Codecov will only show files that have lines covered (hit or miss). If your file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
 
 
 [1]: https://codecov.io/
