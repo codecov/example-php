@@ -1,7 +1,7 @@
 [Codecov][1] PHP Example
 ========================
 
-1. Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here][2]
+1. Collect coverage reports `vendor/bin/phpunit --coverage-clover coverage.xml`, [see here][2]
 2. Call `bash <(curl -s https://codecov.io/bash)` at the end of your CI build, [see here][3]
   - [Learn how to include your upload repository token][4]
 
