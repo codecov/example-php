@@ -1,18 +1,34 @@
-[Codecov][1] PHP Example
-========================
 
-1. Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here][2]
-2. Call `bash <(curl -s https://codecov.io/bash)` at the end of your CI build, [see here][3]
-  - [Learn how to include your upload repository token][4]
 
-> Contact Codecov support team for help :thumbsup: https://codecov.io/support
+# [Codecov][1] PHP Example
 
-# Frequently Asked Questions
+## Guide
+### Travis Setup
 
-####❔Using phpunit.xml.dist?
-Start tracking coverage metrics by adding a coverage logger:
+Add to your `.travis.yml` file.
+```yml
+language: php
 
-```xml
+script:
+    - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
+```
+### Produce Coverage Reports
+Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here][2]
+
+## Caveats
+### Private Repos
+Add to your `.travis.yml` file.
+```yml
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
+```
+## Support
+### FAQ
+- Q: Can I use phpunit.xml.dist?<br/>A: Start tracking coverage metrics by adding a coverage logger:
+ ```xml
 <phpunit>
   ...
   <logging>
@@ -20,13 +36,19 @@ Start tracking coverage metrics by adding a coverage logger:
     </logging>
 </phpunit>
 ```
+- Q: I don't see one or more files, why?<br/>A: Codecov will only show files that have lines covered (hit or miss). If your file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
+### Contact
+- Intercom (in-app messanger)
+- Email: support@codecov.io
+- Slack: slack.codecov.io
+- [gh/codecov/support](https://github.com/codecov/support)
 
-####❔I don't see one or more files?
+1. More documentation at https://docs.codecov.io
+2. Configure codecov through the `codecov.yml`  https://docs.codecov.io/docs/codecov-yaml
 
-Codecov will only show files that have lines covered (hit or miss). If your file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
 
 
 [1]: https://codecov.io/
 [2]: https://github.com/codecov/example-php/blob/master/.travis.yml#L15
 [3]: https://github.com/codecov/example-php/blob/master/.travis.yml#L18
-[4]: http://docs.codecov.io/docs/about-the-codecov-bash-uploader#section-upload-token
+[4]: https://github.com/codecov/codecov-python
