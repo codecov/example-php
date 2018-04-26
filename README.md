@@ -25,6 +25,8 @@ Start tracking coverage metrics by adding a coverage logger:
 
 Codecov will only show files that have lines covered (hit or miss). If your file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
 
+We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
+
 
 [1]: https://codecov.io/
 [2]: https://github.com/codecov/example-php/blob/master/.travis.yml#L15
