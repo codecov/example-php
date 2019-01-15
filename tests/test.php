@@ -1,11 +1,11 @@
 <?php
-    require __DIR__ .'/../vendor/autoload.php';
 
-    class Test extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class Test extends TestCase
+{
+    public function testExample()
     {
-        public function testExample()
-        {
-            $result = Example\Example::go();
-        }
+        $this->assertFalse(Example\Example::go());
     }
-?>  
+}
