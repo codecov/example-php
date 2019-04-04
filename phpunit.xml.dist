@@ -6,4 +6,9 @@
             <file>./tests/test.php</file>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+        <directory suffix=".php">./tests/</directory>
+        </whitelist>
+    </filter>
 </phpunit>

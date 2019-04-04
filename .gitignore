@@ -2,3 +2,5 @@
 vendor
 .DS_Store
 venv
+coverage.xml
+phpunit.xml
