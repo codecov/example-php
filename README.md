@@ -7,6 +7,10 @@
 
 > Contact Codecov support team for help :thumbsup: https://codecov.io/support
 
+# Requirements
+
+- php xdebug extension
+
 # Frequently Asked Questions
 
 #### ❔Using phpunit.xml.dist?
