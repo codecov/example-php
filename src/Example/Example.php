@@ -11,4 +11,13 @@ class Example
         return false;
         
     }
+
+    public static function stop()
+    {
+        if (true) {
+            return false;
+        }
+
+        return true;
+    }
 }
