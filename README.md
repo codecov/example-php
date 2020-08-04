@@ -1,18 +1,26 @@
-[Codecov][1] PHP Example
-========================
+# [Codecov](https://codecov.io) PHP Example
 
-1. Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here][2]
-2. Call `bash <(curl -s https://codecov.io/bash)` at the end of your CI build, [see here][3]
-  - [Learn how to include your upload repository token][4]
+## Guide
 
-> Contact Codecov support team for help :thumbsup: https://codecov.io/support
+### Travis Setup
 
-# Frequently Asked Questions
+Add to your `.travis.yml` file.
+```yml
+language: php
 
-#### ❔Using phpunit.xml.dist?
-Start tracking coverage metrics by adding a coverage logger:
+script:
+    - vendor/bin/phpunit --coverage-clover=coverage.xml
 
-```xml
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
+```
+
+### Produce Coverage Reports
+Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here](https://github.com/codecov/example-php/blob/master/.travis.yml#L15)
+
+### FAQ
+- Q: Can I use phpunit.xml.dist?<br/>A: Start tracking coverage metrics by adding a coverage logger:
+ ```xml
 <phpunit>
   ...
   <logging>
@@ -20,15 +28,13 @@ Start tracking coverage metrics by adding a coverage logger:
     </logging>
 </phpunit>
 ```
+- Q: I don't see one or more files, why?<br/>A: Codecov will only show files that have lines covered (hit or miss). If your file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
 
-#### ❔I don't see one or more files?
+## Caveats
+### Private Repo
+Repository tokens are required for (a) all private repos, (b) public repos not using Travis-CI, CircleCI or AppVeyor. Find your repository token at Codecov and provide via appending `-t <your upload token>` to you where you upload reports.
 
-Codecov will only show files that have lines covered (hit or miss). If your file has no statments it will not show up in Codecov until you add some. Go get em' tiger!
-
-We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
-
-
-[1]: https://codecov.io/
-[2]: https://github.com/codecov/example-php/blob/master/.travis.yml#L15
-[3]: https://github.com/codecov/example-php/blob/master/.travis.yml#L18
-[4]: http://docs.codecov.io/docs/about-the-codecov-bash-uploader#section-upload-token
+## Links
+- [Community Boards](https://community.codecov.io)
+- [Support](https://codecov.io/support)
+- [Documentation](https://docs.codecov.io)
