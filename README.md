@@ -9,14 +9,14 @@ Add to your `.travis.yml` file.
 language: php
 
 script:
-    - vendor/bin/phpunit --coverage-clover=coverage.xml
+    - vendor/bin/phpunit --coverage-clover coverage.xml
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
 ```
 
 ### Produce Coverage Reports
-Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here](https://github.com/codecov/example-php/blob/master/.travis.yml#L15)
+Collect coverage reports `vendor/bin/phpunit --coverage-clover coverage.xml`, [see here](https://github.com/codecov/example-php/blob/master/.travis.yml#L15)
 
 ### FAQ
 - Q: Can I use phpunit.xml.dist?<br/>A: Start tracking coverage metrics by adding a coverage logger:
