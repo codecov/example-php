@@ -1,0 +1,21 @@
+default:
+  workspace: shared
+
+stages:
+- Test
+
+jobs:
+- name: PHPUnit
+  stage: Test
+  image: alpine
+  script:
+  - echo PHPUnit
+  - echo minhhoang99
+
+- name: RSpec
+  stage: Test
+  image: alpine
+  script:
+  - echo RSpec
+  - echo minhhoang99
+  - echo test slack
