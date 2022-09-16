@@ -13,6 +13,6 @@ jobs:
       - name: Install dependencies
         run: composer self-update && composer install
       - name: Run tests and collect coverage
-        run: vendor/bin/phpunit --coverage-clover coverage.xml
+        run: vendor/bin/phpunit --coverage-clover coverage.xml .
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
