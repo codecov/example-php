@@ -1,6 +1,6 @@
-<?php namespace Example;
+<?php namespace Calculator;
 
-class Example
+class Calculator
 {
     public static function go()
     {
@@ -9,6 +9,5 @@ class Example
         }
 
         return false;
-        
     }
 }

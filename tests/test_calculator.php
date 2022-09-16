@@ -3,9 +3,9 @@
 
     class Test extends PHPUnit\Framework\TestCase
     {
-        public function testExample()
+        public function testCalculator()
         {
-            $result = Example\Example::go();
+            $result = Calculator::go();
         }
     }
 ?>
