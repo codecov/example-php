@@ -1,5 +1,6 @@
 <?php
     require __DIR__ .'/../vendor/autoload.php';
+    require_once '../src/Calculator/calculator.php';
 
     class calculatorTest extends PHPUnit\Framework\TestCase
     {
