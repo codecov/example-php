@@ -1,14 +1,14 @@
 <?php
-    require_once __DIR__ .'/../vendor/autoload.php';
+    require __DIR__ .'/../vendor/autoload.php';
 
     class calculatorTest extends PHPUnit\Framework\TestCase
     {
         /**
-         * @covers Calculator\Calculator
+         * @covers Calculator\Calculator\add
         */
-        public function testCalculator()
+        public function testAdd()
         {
-            $this->assertTrue(!Calculator\Calculator::go());
+            $this->assertEquals(Calculator\Calculator::add(0, 1), 1);
         }
     }
 ?>

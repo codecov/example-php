@@ -10,4 +10,8 @@ class Calculator
 
         return false;
     }
+
+    public static function add($x, $y) {
+       return $x + $y;
+    }
 }
