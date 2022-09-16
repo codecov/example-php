@@ -4,11 +4,11 @@
     class calculatorTest extends PHPUnit\Framework\TestCase
     {
         /**
-         * @covers Calculator\Calculator\add
+         * @covers calculator\Calculator\add
         */
         public function testAdd()
         {
-            $this->assertEquals(Calculator\Calculator::add(0, 1), 1);
+            $this->assertEquals(calculator\Calculator::add(0, 1), 1);
         }
     }
 ?>
