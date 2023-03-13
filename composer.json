@@ -18,8 +18,8 @@
         "phpunit/phpunit": "~9.5"
     },
     "autoload": {
-        "psr-0": {
-            "Calculator": "src/"
-        }
+        "files": [
+            "calculator/BasicCalculator.php"
+        ]
     }
 }
