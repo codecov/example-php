@@ -6,7 +6,7 @@ use Calculator\BasicCalculator;
 class calculatorTest extends PHPUnit\Framework\TestCase
 {
     /**
-     * @covers calculator\Calculator\add
+     * @covers Calculator\BasicCalculator
     */
     public function testAdd()
     {
@@ -18,7 +18,7 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers calculator\Calculator\subtract
+     * @covers Calculator\BasicCalculator
     */
     public function testSubtract()
     {
@@ -31,7 +31,7 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers calculator\Calculator\multiply
+     * @covers Calculator\BasicCalculator
     */
     public function testMultiply()
     {
@@ -43,7 +43,7 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers calculator\Calculator\divide
+     * @covers Calculator\BasicCalculator
     */
     public function testDivide()
     {
