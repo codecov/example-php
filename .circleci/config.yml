@@ -1,0 +1,21 @@
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.2.3
+jobs:
+  build:
+    docker:
+      - image: cimg/php:8.1-browsers
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - checkout
+      - browser-tools/install-browser-tools
+      - run:
+          name: "Run tests"
+          command: phpdbg -qrr vendor/bin/phpunit --coverage-clover build/coverage-report
+          environment:
+            XDEBUG_MODE: coverage
+      - store_artifacts:
+          path:  build/coverage-report
+
