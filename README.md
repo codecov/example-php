@@ -1,1 +1,1 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/KagisoLesomo/OTP/tree/main.svg?style=svg&circle-token=566fb8faa1a0c610c4679ca0be7f6679bf888a11)](https://dl.circleci.com/status-badge/redirect/gh/KagisoLesomo/OTP/tree/main)
+
