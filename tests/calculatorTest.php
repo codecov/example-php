@@ -10,11 +10,11 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     */
     public function testAdd()
     {
-        $this->assertEquals(BasicCalculator::add(1, 2), 3.0);
-        $this->assertEquals(BasicCalculator::add(1.0, 2.0), 3.0);
-        $this->assertEquals(BasicCalculator::add(0, 2.0), 2.0);
-        $this->assertEquals(BasicCalculator::add(2.0, 0), 2.0);
-        $this->assertEquals(BasicCalculator::add(-4, 2.0), -2.0);
+        $this->assertEquals(3.0, BasicCalculator::add(1, 2));
+        $this->assertEquals(3.0, BasicCalculator::add(1.0, 2.0));
+        $this->assertEquals(2.0, BasicCalculator::add(0, 2.0));
+        $this->assertEquals(2.0, BasicCalculator::add(2.0, 0));
+        $this->assertEquals(-2.0, BasicCalculator::add(-4, 2.0));
     }
 
     /**
@@ -22,12 +22,12 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     */
     public function testSubtract()
     {
-        $this->assertEquals(BasicCalculator::subtract(1, 2), -1.0);
-        $this->assertEquals(BasicCalculator::subtract(2, 1), 1.0);
-        $this->assertEquals(BasicCalculator::subtract(1.0, 2.0), -1.0);
-        $this->assertEquals(BasicCalculator::subtract(0, 2.0), -2.0);
-        $this->assertEquals(BasicCalculator::subtract(2.0, 0), 2.0);
-        $this->assertEquals(BasicCalculator::subtract(-4, 2.0), -6.0);
+        $this->assertEquals(-1.0, BasicCalculator::subtract(1, 2));
+        $this->assertEquals(1.0, BasicCalculator::subtract(2, 1));
+        $this->assertEquals(-1.0, BasicCalculator::subtract(1.0, 2.0));
+        $this->assertEquals(-2.0, BasicCalculator::subtract(0, 2.0));
+        $this->assertEquals(2.0, BasicCalculator::subtract(2.0, 0));
+        $this->assertEquals(-6.0, BasicCalculator::subtract(-4, 2.0));
     }
 
     /**
@@ -35,11 +35,11 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     */
     public function testMultiply()
     {
-        $this->assertEquals(BasicCalculator::multiply(1, 2), 2.0);
-        $this->assertEquals(BasicCalculator::multiply(1.0, 2.0), 2.0);
-        $this->assertEquals(BasicCalculator::multiply(0, 2.0), 0.0);
-        $this->assertEquals(BasicCalculator::multiply(2.0, 0), 0.0);
-        $this->assertEquals(BasicCalculator::multiply(-4, 2.0), -8.0);
+        $this->assertEquals(2.0, BasicCalculator::multiply(1, 2));
+        $this->assertEquals(2.0, BasicCalculator::multiply(1.0, 2.0));
+        $this->assertEquals(0.0, BasicCalculator::multiply(0, 2.0));
+        $this->assertEquals(0.0, BasicCalculator::multiply(2.0, 0));
+        $this->assertEquals(-8.0, BasicCalculator::multiply(-4, 2.0));
     }
 
     /**
@@ -47,10 +47,10 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     */
     public function testDivide()
     {
-        $this->assertEquals(BasicCalculator::divide(1, 2), 0.5);
-        $this->assertEquals(BasicCalculator::divide(1.0, 2.0), 0.5);
-        $this->assertEquals(BasicCalculator::divide(0, 2.0), 0.0);
-        $this->assertEquals(BasicCalculator::divide(-4, 2.0), -2.0);
-        // $this->assertEquals(BasicCalculator::divide(2.0, 0), 'Cannot divide by 0');
+        $this->assertEquals(0.5, BasicCalculator::divide(1, 2));
+        $this->assertEquals(0.5, BasicCalculator::divide(1.0, 2.0));
+        $this->assertEquals(0.0, BasicCalculator::divide(0, 2.0));
+        $this->assertEquals(-2.0, BasicCalculator::divide(-4, 2.0));
+        $this->assertEquals('Cannot divide by 0', BasicCalculator::divide(2.0, 0));
     }
 }
