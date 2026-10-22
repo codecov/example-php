@@ -6,7 +6,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # 8.1 has no upstream fix for CVE-2026-109618 / CVE-2026-109619.
         php: ['8.3.36', '8.4.27']
     steps:
       - name: Checkout
