@@ -3,13 +3,18 @@ on: [push, pull_request]
 jobs:
   run:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 8.1 has no upstream fix for CVE-2026-109618 / CVE-2026-109619.
+        php: ['8.3.36', '8.4.27']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up php 8.1
+      - name: Set up PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: ${{ matrix.php }}
       - name: Install dependencies
         run: composer self-update && composer install && composer dump-autoload
       - name: Run tests and collect coverage
